@@ -39,6 +39,9 @@ async function createFiles(sql) {
         console.log("Successfully created all files!")
         console.log("---------------------------------")
         console.log("Finished")
+
+        const siginiture = await fsPromises.readFile(`${restApiPath}/Signiture/signiture.txt`, "utf-8")
+        console.log(siginiture)
         console.log("Enjoy Coding :)")
     }
     catch (err) {
