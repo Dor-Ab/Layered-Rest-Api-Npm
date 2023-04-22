@@ -1,0 +1,8 @@
+class AppConfig {
+    // Server Port
+    public port = "Change to desire port"
+}
+
+const appConfig = new AppConfig()
+
+export default appConfig
