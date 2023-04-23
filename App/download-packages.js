@@ -1,6 +1,7 @@
 const execSync = require("child_process").execSync
 const isNodemonGlobal = require("./is-nodemon-global")
 const isTsNode = require("./is-tsnode")
+const isPromptSync = require("./is-promp-sync")
 
 function downloadPackages(sql) {
     try {
@@ -11,6 +12,20 @@ function downloadPackages(sql) {
 
             execSync("npm i @types/mysql -D")
             console.log("Downloaded @types/mysql")
+        }
+
+        const promptSyncUserInput = isPromptSync()
+
+        if (promptSyncUserInput === "true") {
+            execSync("npm i nodemon -g")
+            console.log("Downloaded prompt-sync globally")
+        }
+        else if (promptSyncUserInput === "false") {
+            execSync("npm i nodemon")
+            console.log("Downloaded prompt-sync locally")
+        }
+        else {
+            console.log("prompt-sync exists")
         }
 
         // Checks if nodemone installed globally, if not ask user to install locally or globally
