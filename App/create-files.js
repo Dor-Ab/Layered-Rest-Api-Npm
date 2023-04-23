@@ -1,6 +1,8 @@
 const fsPromises = require("fs/promises")
 const os = require('os')
-const restApiPath = `C:/Users/${os.userInfo().username}/AppData/Roaming/npm/node_modules/layered-api-dev-ts/App/Utils`
+// const restApiPath = `C:/Users/${os.userInfo().username}/AppData/Roaming/npm/node_modules/layered-api-dev-ts/App/Utils`
+const path = require("path")
+const restApiPath = path.join(__dirname, "..", "App", "Utils")
 
 async function createFiles(sql) {
     try {
