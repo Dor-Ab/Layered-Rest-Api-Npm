@@ -1,6 +1,6 @@
 {
   "name": "layered-api-dev-ts",
-  "version": "1.3.7",
+  "version": "1.3.10",
   "description": "Create layered REST API template in seconds.",
   "main": "main.js",
   "scripts": {
@@ -17,5 +17,8 @@
   "license": "ISC",
   "bin": {
     "getStarted": "main.js"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
   }
 }
