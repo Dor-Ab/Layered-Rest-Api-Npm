@@ -4,6 +4,7 @@ const prompt = ps()
 const absulotePath = require("path")
 const path = absulotePath.join(__dirname, "..", "createReact.bat")
 const fsPromises = require("fs/promises")
+const isCreateReact = require("./is-create-react")
 
 async function createReact() {
     try {
