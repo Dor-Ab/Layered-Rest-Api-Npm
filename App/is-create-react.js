@@ -4,7 +4,7 @@ const prompt = ps()
 function isCreateReact() {
     const positive = ["YES", "Y", "y", "yes", "Yes"]
     try {
-        require("create-react-app")
+        require("create-react-app/package.json")
         return
     }
     catch {
