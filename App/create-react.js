@@ -1,4 +1,5 @@
-const execSync = require("child_process")
+const execSync = require("child_process").execSync
+const exec = require("child_process").exec
 const ps = require("prompt-sync")
 const prompt = ps()
 const absulotePath = require("path")
@@ -28,7 +29,7 @@ async function createReact() {
     pause
     `
         await fsPromises.writeFile(path, data)
-        execSync.execSync(`start ${path}`)
+        exec(`start ${path}`)
     }
     catch (err) {
         console.log(err)

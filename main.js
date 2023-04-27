@@ -10,7 +10,7 @@ async function getStarted() {
     const sql = argv.filter(a => a == "sql")[0]
     const react = argv.filter(a => a == "react")[0]
     if (react) {
-        createReact()
+        await createReact()
     }
     initProject()
     downloadPackages(sql)
