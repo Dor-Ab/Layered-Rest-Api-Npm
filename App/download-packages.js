@@ -51,6 +51,9 @@ function downloadPackages(sql) {
         execSync("npm i @types/express -D")
         console.log("Downloaded @types/express")
 
+        execSync("npm i express-rate-limit")
+        console.log("Downloaded  express-rate-limit")
+
         execSync("npm i joi")
         console.log("Downloaded joi")
 

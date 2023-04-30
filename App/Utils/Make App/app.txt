@@ -3,8 +3,15 @@ import express from "express"
 import appConfig from "./2-Utils/app-config"
 import catchAll from "./3-Middleware/catch-all"
 import routeNotFound from "./3-Middleware/route-not-found"
+import expressRateLimit from "express-rate-limit"
 
 const server = express()
+
+server.use("/api/", expressRateLimit({
+    max: 1,
+    windowMs: 1000
+}))
+
 server.use(cors())
 server.use(express.json())
 
